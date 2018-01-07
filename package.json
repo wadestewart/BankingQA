@@ -16,5 +16,22 @@
   "bugs": {
     "url": "https://github.com/wadestewart/BankingQA/issues"
   },
-  "homepage": "https://github.com/wadestewart/BankingQA#readme"
+  "homepage": "https://github.com/wadestewart/BankingQA#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-ejs-layouts": "^2.3.1",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.1",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
 }
