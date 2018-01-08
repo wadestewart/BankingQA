@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 
 // Define the 'key: value' pairs of the schema for the topics to be pulled from the database
 const topicSchema = new mongoose.Schema({
-    title: string,
-    description: string,
+    title: String,
+    description: String,
     subtopic: {
-        name: string,
-        detail: string
+        name: String,
+        detail: String
     }
 })
 
