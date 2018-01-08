@@ -12,7 +12,7 @@ const mongoUri = 'mongodb://localhost/bankingqa'
 // Connect to database, with imported mongoose instance
 mongoose
     .connect(mongoUri, {useMongoClient: true})
-    .then(connection => console.log(`Connection established to '${connection.db.databaseName}`))
+    .then(connection => console.log(`Connection established to '${connection.db.databaseName}'`))
     .catch(connectionError => console.log('Connection Failed!', connectionError))
 // Mongoose instance now has a configured connection to our local db, in addition to it's model configuration
 
