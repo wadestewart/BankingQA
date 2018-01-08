@@ -1,8 +1,8 @@
-// // GET /
-// function home(req, res) {  
-//     res.render('index');
-//   }
+// GET - Static homepage
+function home(req, res) {  
+    res.render('welcome');
+  }
   
-//   module.exports = {
-//     home: home,
-//   }
+  module.exports = {
+    home: home,
+  }

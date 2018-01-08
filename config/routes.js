@@ -1,6 +1,7 @@
-const express = require('express')
-const mongoose = require('../db/connection')
-var staticsController = require('../controllers/static');
+const express           = require('express')
+const mongoose          = require('../db/connection')
+const topicsController   = require('../controllers/topics')
+const staticsController = require('../controllers/static');
 
 // Gets the model from our db connection, for queries and manipulating data
 const Topic = mongoose.model('Topic')
@@ -10,6 +11,9 @@ const Topic = mongoose.model('Topic')
 const router = express.Router()
 
 router.route('/')
-    .get()
+    .get(staticsController.home)
+
+router.route('/topics')
+    .get(topicsController.getTopics)
 
 module.exports = router

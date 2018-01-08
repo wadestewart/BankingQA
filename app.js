@@ -1,7 +1,7 @@
 const express           = require('express')
 const hbs               = require('express-handlebars')
 
-const topicController   = require('./config/routes')
+const dataController   = require('./config/routes')
 
 const app = express()
 
@@ -15,6 +15,6 @@ app.engine(".hbs", hbs({
     defaultLayout:  'layout'
 }));
 
-app.use('/', topicController)
+app.use('/', dataController)
 
 app.listen(app.get('port'), () => console.log('Live on 4100'))

@@ -1,7 +1,7 @@
 // This file will link mongoose to our Mongo database
 
-// Importing a mongoose instance with our model schema (configuration) attached
-const mongoose = require('./models/topic')
+// Importing mongoose into the connection file a middleware to MongoDb
+const mongoose = require('mongoose')
 
 // Replacing mongoose (deprecated) promise library with ES6 promise library
 mongoose.Promise = Promise
