@@ -4,7 +4,11 @@ const mongoose = require('mongoose')
 // Define the 'key: value' pairs of the schema for the topics to be pulled from the database
 const topicSchema = new mongoose.Schema({
     title: string,
-    description: string
+    description: string,
+    subtopic: {
+        name: string,
+        detail: string
+    }
 })
 
 // Build a model from the schema, and attach it to the mongoose instance

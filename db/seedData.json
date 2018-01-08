@@ -1,0 +1,106 @@
+[
+    {
+        "title": "Identity Theft & Fraud",
+        "description": "Learn how to protect your identity",
+        "subtopic": [
+        {
+            "name": "What is Identity?",
+            "detail": "In the information sphere, your identity consists of your biographical data, biometric data, financial data, and your medical data."
+        },
+        {
+            "name": "Identity Theft Vs. Fraud",
+            "detail": "To better understand how we put ourselves at risk, let’s examine the difference between identity theft and identity fraud."
+        },
+        {
+            "name": "Methods of ID Theft",
+            "detail": "Identity thieves use many different strategies and methods to access your data. Let’s take a look at some of the most common and widely used methods!"
+        },
+        {
+            "name": "Identity Scams",
+            "detail": "Thieves often use scams to trick people to giving up their sensitive information. We’ll talk about some common scams,  and try to spot some of the red flags."
+        },
+        {
+            "name": "Protecting Against ID Theft",
+            "detail": "What can you do to prevent an identity thief from stealing your information?"
+        }
+    ]
+    },
+    {
+        "title": "Credit Scores and Reports",
+        "description": "Learn about Credit Scores & Reports",
+        "subtopic": [
+        {
+            "name": "What is a Credit Score?",
+            "detail": "A credit score is a 3-digit number that businesses use to learn how likely you are to repay any debts."
+        },
+        {
+            "name": "Impact of Credit Scores",
+            "detail": "Let’s take a look at a scenario that shows us how a good credit score can be helpful while a bad one might get in the way of your financial goals."
+        },
+        {
+            "name": "Credit Reports",
+            "detail": "It’s important to review your credit report regularly. It’s one of the ways to build and maintain good credit."
+        },
+        {
+            "name": "Maintaining Healthy Credit",
+            "detail": "Maintaining Healthy Credit"
+        },
+        {
+            "name": "Credit Repair Scams",
+            "detail": "Repairing your credit can be an emotional process and there are many agencies that may try to scam you as you work towards your goal."
+        }
+    ]
+    },
+    {
+        "title": "Retirement",
+        "description": "Plan for Retirement",
+        "subtopic": [
+        {
+            "name": "Retirement Readiness",
+            "detail": "In order to have financial security when you are no longer working, you need to develop and implement a retirement savings plan as early as possible."
+        },
+        {
+            "name": "Income Sources",
+            "detail": "Retirement income could come from a variety of sources. There are many options available to you, especially if you plan ahead and choose options that may be the most useful for you."
+        },
+        {
+            "name": "Saving & Planning Strategies",
+            "detail": "Planning for retirement means you’ll need to save as well as invest. Develop a strategy to maximize your retirement income!"
+        },
+        {
+            "name": "Types of Plans",
+            "detail": "Most retirement plans are composed of a preset choice of investment options such as mutual funds, which are often made up of stocks and bonds."
+        },
+        {
+            "name": "Investments",
+            "detail": "Invest directly in stocks and bonds, or a diversified combination of several options."
+        }
+    ]
+    },
+    {
+        "title": "Mortgages",
+        "description": "Learn About Mortgages",
+        "subtopic": [
+        {
+            "name": "Understanding Mortgages",
+            "detail": "Getting a mortgage doesn’t have to be an anxiety-ridden process. Let’s get started and understand what a mortgage really is."
+        },
+        {
+            "name": "Common Costs",
+            "detail": "Let’s identify and define costs associated with a mortgage that you need to be thinking about."
+        },
+        {
+            "name": "Budgeting for a Mortgage",
+            "detail": "Making a budget and planning carefully for a mortgage can make it easier to manage and pay off effectively."
+        },
+        {
+            "name": "Types of Mortgages",
+            "detail": "Some mortgages are fixed, and others are adjustable. It’s like comparing apples and oranges!"
+        },
+        {
+            "name": "Getting a Mortgage",
+            "detail": "There are many places where you can go to get a mortgage."
+        }
+    ]
+    }
+]
