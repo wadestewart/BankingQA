@@ -1,6 +1,7 @@
 const express           = require('express')
 const mongoose          = require('../db/connection')
-const topicsController   = require('../controllers/topics')
+const usersController   = require('../controllers/users')
+const topicsController  = require('../controllers/topics')
 const staticsController = require('../controllers/static');
 
 // Gets the model from our db connection, for queries and manipulating data
@@ -13,6 +14,11 @@ const router = express.Router()
 // Route for the static home page
 router.route('/')
     .get(staticsController.home)
+
+// Route to signup page
+router.route('/signup')
+    .get(usersController.getSignup)
+    .post(usersController.postSignup)
 
 // Route to the Topics list in the Q&A Forum and to POST a question
 router.route('/topics')
