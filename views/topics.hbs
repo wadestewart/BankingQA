@@ -1,0 +1,17 @@
+{{#if topic}}
+<h2>{{topic.title}}</h2>
+<h3>{{topic.description}}</h3>
+{{else}}
+<h2>That topic couldn't be found!</h2>
+{{/if}}
+
+<h4>Edit Question about {{ topic.title }}</h4>
+<form action="/topics/{{ topic.title }}?_method=put" method="post">
+  <input type="text" name="topic[description]" value="Question">
+  <input type="submit" value="Update">
+</form>
+
+<h4>Remove Question</h4>
+<form action="/topics/{{topic.title}}?_method=delete" method="post">
+  <input type="submit" value="Remove">
+</form>

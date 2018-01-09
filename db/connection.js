@@ -1,4 +1,4 @@
-// This file will link mongoose to our Mongo database
+// This file will use mongoose to link our Mongo database to our app
 
 // Importing mongoose into the connection file a middleware to MongoDb
 const mongoose = require('mongoose')

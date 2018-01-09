@@ -6,10 +6,50 @@ function getTopics(req, res) {
     Topic
     .find({})
     .then((topics) => {
-        res.render('index.hbs', { topics })
+        res.render('index', { topics })
+    })
+}
+
+// GET - function to find a requested individual topic
+function findOneTopic(req, res) {
+    Topic
+    .findOne({ title: req.params.title })
+    .then(topic => {
+        res.render('topics', { topic })
+    })
+}
+
+//POST - function to POST a question
+function postTopic(req, res) {
+    Topic
+    .create(req.body.topic)
+    .then(topic => {
+        res.redirect(`/topics/${topic.title}`)
+    })
+}
+
+//PUT - function to edit an existing question
+function updateTopic(req, res) {
+    Topic
+    .findOneAndUpdate({ title: req.params.title }, req.body.topic, { new: true})
+    .then(topic => {
+        res.redirect(`/topics/${topic.title}`)
+    })
+}
+
+//DELETE - function to remove a question
+function removeTopic(req, res) {
+    Topic
+    .findOneAndRemove({ title: req.params.title })
+    .then(() => {
+        res.redirect('/topics')
     })
 }
 
 module.exports = {
-    getTopics: getTopics
+    getTopics: getTopics,
+    findOneTopic: findOneTopic,
+    postTopic: postTopic,
+    updateTopic: updateTopic,
+    removeTopic: removeTopic
 }

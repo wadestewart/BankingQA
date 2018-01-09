@@ -10,10 +10,19 @@ const Topic = mongoose.model('Topic')
 // then we will configure (using setter methods) for handling routes
 const router = express.Router()
 
+// Route for the static home page
 router.route('/')
     .get(staticsController.home)
 
+// Route to the Topics list in the Q&A Forum and to POST a question
 router.route('/topics')
     .get(topicsController.getTopics)
+    .post(topicsController.postTopic)
+
+// Route to an individual Topic    
+router.route('/topics/:title')
+    .get(topicsController.findOneTopic)
+    .put(topicsController.updateTopic)
+    .delete(topicsController.removeTopic)
 
 module.exports = router
