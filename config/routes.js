@@ -25,4 +25,8 @@ router.route('/topics/:title')
     .put(topicsController.updateTopic)
     .delete(topicsController.removeTopic)
 
+// Route to an individual Subtopic
+router.route('/topics/:title/:name')
+    .get(topicsController.findOneSubtopic)
+
 module.exports = router

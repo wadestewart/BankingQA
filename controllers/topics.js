@@ -19,7 +19,16 @@ function findOneTopic(req, res) {
     })
 }
 
-//POST - function to POST a question
+// GET - function to find a requested individual subtopic
+function findOneSubtopic(req, res) {
+    Topic
+    .findOne({ "title": req.params.title, "subtopic.name": req.params.name })
+    .then(subtopic => {
+        res.render('subtopics', { subtopic })
+    })
+}
+
+//POST - function to POST a question on a Topic
 function postTopic(req, res) {
     Topic
     .create(req.body.topic)
@@ -27,6 +36,8 @@ function postTopic(req, res) {
         res.redirect(`/topics/${topic.title}`)
     })
 }
+
+//POST - function to POST a question on a Subtopic
 
 //PUT - function to edit an existing question
 function updateTopic(req, res) {
@@ -51,5 +62,6 @@ module.exports = {
     findOneTopic: findOneTopic,
     postTopic: postTopic,
     updateTopic: updateTopic,
-    removeTopic: removeTopic
+    removeTopic: removeTopic,
+    findOneSubtopic: findOneSubtopic
 }
