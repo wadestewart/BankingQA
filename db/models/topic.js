@@ -5,10 +5,13 @@ const mongoose = require('../connection')
 const topicSchema = new mongoose.Schema({
     title: String,
     description: String,
-    subtopic: {
+    // suptopic: [suptopicSchema] //after defining a separate suptopicSchema above this one
+    subtopic: [
+        {
         name: String,
         detail: String
-    }
+        }
+    ]
 })
 
 // Build a model from the schema, and attach it to the mongoose instance
