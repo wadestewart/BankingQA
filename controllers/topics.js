@@ -13,8 +13,10 @@ function getTopics(req, res) {
 // GET - function to find a requested individual topic
 function findOneTopic(req, res) {
     Topic
+    // .findOne({ title: req.params.title })
     .findOne({ title: req.params.title })
     .then(topic => {
+        console.log(topic)
         res.render('topics', { topic })
     })
 }
@@ -22,8 +24,9 @@ function findOneTopic(req, res) {
 // GET - function to find a requested individual subtopic
 function findOneSubtopic(req, res) {
     Topic
-    .findOne({ "title": req.params.title, "subtopic.name": req.params.name })
+    .findOne({ "title": req.params.title, "subtopic.id": req.params.id })
     .then(subtopic => {
+        // console.log(subtopic)
         res.render('subtopics', { subtopic })
     })
 }
