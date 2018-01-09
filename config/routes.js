@@ -20,12 +20,19 @@ router.route('/signup')
     .get(usersController.getSignup)
     .post(usersController.postSignup)
 
+// Route to login page
+router.route('/login')
+    .get(usersController.getLogin)
+    .post(usersController.postLogin)
+
+// Route for logout
+
 // Route to the Topics list in the Q&A Forum and to POST a question
 router.route('/topics')
     .get(topicsController.getTopics)
     .post(topicsController.postTopic)
 
-// Route to an individual Topic    
+// Route to an individual Topic and to edit or delete a topic
 router.route('/topics/:title')
     .get(topicsController.findOneTopic)
     .put(topicsController.updateTopic)
