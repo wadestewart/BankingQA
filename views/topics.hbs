@@ -4,7 +4,7 @@
 <hr>
 {{#each topic.subtopic as |subtopic index|}}
 <h3>
-  <a href="/topics/{{../topic.title}}/{{subtopic.name}}">{{subtopic.name}}</a>
+  <a href="/topics/{{../topic.title}}/{{subtopic._id}}">{{subtopic.name}}</a>
 </h3>
 {{/each}}
 {{else}}

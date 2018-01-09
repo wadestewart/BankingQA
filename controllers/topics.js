@@ -16,18 +16,19 @@ function findOneTopic(req, res) {
     // .findOne({ title: req.params.title })
     .findOne({ title: req.params.title })
     .then(topic => {
-        console.log(topic)
         res.render('topics', { topic })
     })
 }
 
 // GET - function to find a requested individual subtopic
+// Holy Smokes - Hammad found the code below to target and render a specific subtopic, it took us 4 hours...
 function findOneSubtopic(req, res) {
     Topic
-    .findOne({ "title": req.params.title, "subtopic.id": req.params.id })
-    .then(subtopic => {
-        // console.log(subtopic)
-        res.render('subtopics', { subtopic })
+    .findOne({ "title": req.params.title })
+    .then(topic => {
+        let subtopicPredicate = el => el._id = req.params.name
+        let subtopicItem = topic.subtopic.findIndex(subtopicPredicate)
+        res.render('subtopics', {subtopic: topic.subtopic[subtopicItem]})
     })
 }
 
