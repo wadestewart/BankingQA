@@ -19,9 +19,9 @@ app.use(morgan('dev'))
 app.use(cookieParser())
 app.use(parser())
 
-app.set('port', process.env.PORT || 4100)
+app.set('port', process.env.PORT || 3001)
 app.set('view engine', 'hbs')
-app.engine(".hbs", hbs({
+app.engine('.hbs', hbs({
     extname:        '.hbs',
     partialsDir:    'views/',
     layoutsDir:     'views/',
@@ -49,4 +49,4 @@ app.use(methodOverride('_method'))
 app.use(parser.urlencoded({ extended: true }))
 app.use('/', dataController)
 
-app.listen(app.get('port'), () => console.log('Live on 4100'))
+app.listen(app.get('port'), () => console.log('Live on 3001'))
