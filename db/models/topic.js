@@ -16,11 +16,6 @@ const topicSchema = new mongoose.Schema({
 // Build a model from the schema, and attach it to the mongoose instance
 // This is how we query and manipulate data in the db
 const Topic = mongoose.model('Topic', topicSchema)
-if(process.env.NODE_ENV == 'production'){
-    mongoose.connect(process.env.MONGODB_URI)
-  } else {
-    mongoose.connect('mongodb://localhost/bankingqa')
-  }
 
 // Give this file the ability to be imported into other files
 module.exports = Topic

@@ -8,6 +8,11 @@ mongoose.Promise = Promise
 
 // Set the URI for connecting to local MongoDb
 const mongoUri = 'mongodb://localhost/bankingqa'
+if (process.env.NODE_ENV === 'production') {
+    mongoose.connect(process.env.MLAB_URL, { useMongoClient: true })
+  } else {
+    mongoose.connect(mongoUri, { useMongoClient: true })
+  }
 
 // Connect to database, with imported mongoose instance
 mongoose
