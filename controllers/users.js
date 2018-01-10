@@ -24,12 +24,12 @@ function getLogin (req, res, next) {
 // POST login - function to handle login form when submitted
 function postLogin (req, res, next) {
     let loginProperty = passport.authenticate('local-login', { // naming convention from passport.js
-        successRedirect : '/',
+        successRedirect : '/topics',
         failureRedirect : '/login',
         failureFlash : true
     })
 
-    return loginProperty(req, res, next)
+    return loginProperty(req, res)
 }
 
 // GET logout - function for a user to logout and redirect to home page
