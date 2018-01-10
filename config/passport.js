@@ -3,8 +3,6 @@
 const LocalStrategy     = require('passport-local').Strategy
 const User              = require('../db/models/user')
 
-// This is the signup strategy
-// 3 arguments: 1. & 2. user info to be hashed, 3. tell strategy to send request object to callback for further use
 module.exports = function(passport) {
 
     // Here we are 'serializing' user data (translating data into a format for storage) and attaching to a session
@@ -19,7 +17,8 @@ module.exports = function(passport) {
         })
     })
 
-
+    // This is the signup strategy
+    // 3 arguments: 1. & 2. user info to be hashed, 3. tell strategy to send request object to callback for further use
     passport.use('local-signup', new LocalStrategy({ // local-signup is naming convention for POST signup
         usernameField: 'email',
         passwordField: 'password',

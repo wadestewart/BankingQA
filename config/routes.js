@@ -1,5 +1,8 @@
 const express           = require('express')
 const mongoose          = require('../db/connection')
+const parser            = require('body-parser')
+const methodOverride    = require('method-override')
+const passport          = require('passport')
 const usersController   = require('../controllers/users')
 const topicsController  = require('../controllers/topics')
 const staticsController = require('../controllers/static');
@@ -26,6 +29,8 @@ router.route('/login')
     .post(usersController.postLogin)
 
 // Route for logout
+router.route('/logout')
+    .get(usersController.getLogout)
 
 // Route to the Topics list in the Q&A Forum and to POST a question
 router.route('/topics')

@@ -13,7 +13,7 @@ const dataController    = require('./config/routes')
 
 const app               = express()
 
-mongoose.connect('mongodb://localhost/bankingqa')
+// mongoose.connect('mongodb://localhost/bankingqa')
 
 app.use(morgan('dev'))
 app.use(cookieParser())
@@ -46,6 +46,7 @@ var routes = require('./config/routes');
 app.use(routes);
 
 app.use(methodOverride('_method'))
+app.use('/assets', express.static('public'))
 app.use(parser.urlencoded({ extended: true }))
 app.use('/', dataController)
 
