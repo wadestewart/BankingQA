@@ -13,5 +13,5 @@
 
 ## Planning:
 ===========
-
-### ![Alt text](domain_mode_erd.jpg)
+<!-- ### ![Alt text](domain_mode_erd.jpg) -->
+### Planning for my project consisted of fleshing the idea through a user story. As on online banking user and a user in need of financial literacy, the idea is a Q & A forum that sits in the dashboard when a user logs into their online banking account. The user would have the ability to access a predetermined list of topics, with some questions and answers provided. The user would also be able to ask their own specific questions, edit their questions, and delete their questions. Once I established the user story, the wire framing consisted of gathering basic financial topics and using these topics as my domains. The ERD shows a path from the Bank domain to a Topic directory (one to many), and then to a Subtopic directory (one to mny) with more specific information. The bank domain would also have a path to Users (one to many).
