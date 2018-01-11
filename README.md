@@ -12,6 +12,6 @@
 ### My unsolved problems are *1* user authentication: I do not have a functional signup or login - I receive an internal server error when I attempt these functions and my app breaks. I would also like to add CRUD functionality to my subtopics, but ran out of time and patience!
 
 ## Planning:
-============
+==
 
 ###
