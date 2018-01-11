@@ -43,6 +43,10 @@ router.route('/topics/:title')
     .put(topicsController.updateTopic)
     .delete(topicsController.removeTopic)
 
+// Route to get Subtopics list in the Q&A forum and to POST a question
+router.route('/subtopics')
+    .get(topicsController.getSubtopics)
+
 // Route to an individual Subtopic
 router.route('/subtopics/:_id')
     .get(topicsController.findOneSubtopic)

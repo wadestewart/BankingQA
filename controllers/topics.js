@@ -15,6 +15,15 @@ function getTopics(req, res) {
     })
 }
 
+// GET - function to retrieve Subtopic data from db, then render the query
+function getSubtopics(req, res) {
+    Subtopic
+    .find({})
+    .then((subtopics) => {
+        res.render('subtopics', { subtopics })
+    })
+}
+
 // GET - function to find a requested individual topic
 function findOneTopic(req, res) {
     Topic
@@ -26,15 +35,6 @@ function findOneTopic(req, res) {
         console.log(err)
     })
 }
-
-// GET - function to retrieve Subtopic data from db, then render the query
-// function getSubtopics(req, res) {
-//     Subtopic
-//     .find({})
-//     .then((subtopics) => {
-//         res.send
-//     })
-// }
 
 // GET - function to find a requested individual subtopic
 // Holy Smokes - Hammad found the code below to target and render a specific subtopic, it took us 4 hours...
@@ -96,5 +96,6 @@ module.exports = {
     postTopic: postTopic,
     updateTopic: updateTopic,
     removeTopic: removeTopic,
+    getSubtopics: getSubtopics,
     findOneSubtopic: findOneSubtopic
 }

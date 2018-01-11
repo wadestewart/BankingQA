@@ -1,11 +1,7 @@
 {{#if topic}}
 <h1>{{topic.title}}</h1>
 <h2>{{topic.description}}</h2>
-{{#each subtopics as |subtopic index|}}
-<h3>
-  <a href="/subtopics/{{subtopic._id}}">{{subtopic.name}}</a>
-</h3>
-{{/each}}
+<a href="/subtopics"class="btn waves-effect waves-light orange lighten-2 black-text">Learn More</a>
 {{else}}
 <h2>That topic couldn't be found!</h2>
 {{/if}}
@@ -20,4 +16,3 @@
 <form action="/topics/{{ topic.title }}?_method=delete" method="post">
   <input type="submit" placeholder="Remove">
 </form>
-
