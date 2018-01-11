@@ -1,10 +1,9 @@
 {{#if topic}}
 <h1>{{topic.title}}</h1>
 <h2>{{topic.description}}</h2>
-<hr>
-{{#each topic.subtopic as |subtopic index|}}
+{{#each subtopics as |subtopic index|}}
 <h3>
-  <a href="/topics/{{../topic.title}}/{{subtopic._id}}">{{subtopic.name}}</a>
+  <a href="/subtopics/{{subtopic._id}}">{{subtopic.name}}</a>
 </h3>
 {{/each}}
 {{else}}
@@ -13,11 +12,12 @@
 
 <h4>Edit Question about {{ topic.title }}</h4>
 <form action="/topics/{{ topic.title }}?_method=put" method="post">
-  <input type="text" name="topic[description]" value="Question">
+  <input type="text" name="topic[description]" placeholder="Question">
   <input type="submit" value="Update">
 </form>
 
 <h4>Remove Question</h4>
 <form action="/topics/{{ topic.title }}?_method=delete" method="post">
-  <input type="submit" value="Remove">
+  <input type="submit" placeholder="Remove">
 </form>
+

@@ -1,34 +1,54 @@
 const mongoose = require('../db/connection')
-const Topic = require('../db/models/topic')
+const Topic = require('../db/models/topic').Topic
+const Subtopic = require('../db/models/topic').Subtopic
 
-// GET - function to retrieve data from db, then render the query
+// GET - function to retrieve Topic data from db, then render the query
 function getTopics(req, res) {
+    // console.log(req)
     Topic
     .find({})
     .then((topics) => {
         res.render('index', { topics })
+    })
+    .catch((err)=> {
+        console.log(err)
     })
 }
 
 // GET - function to find a requested individual topic
 function findOneTopic(req, res) {
     Topic
-    // .findOne({ title: req.params.title })
     .findOne({ title: req.params.title })
     .then(topic => {
         res.render('topics', { topic })
     })
+    .catch((err)=> {
+        console.log(err)
+    })
 }
+
+// GET - function to retrieve Subtopic data from db, then render the query
+// function getSubtopics(req, res) {
+//     Subtopic
+//     .find({})
+//     .then((subtopics) => {
+//         res.send
+//     })
+// }
 
 // GET - function to find a requested individual subtopic
 // Holy Smokes - Hammad found the code below to target and render a specific subtopic, it took us 4 hours...
 function findOneSubtopic(req, res) {
     Topic
-    .findOne({ "title": req.params.title })
+    .findOne({ title: req.params.title})
     .then(topic => {
+        console.log(topic)
         let subtopicPredicate = el => el._id = req.params.name
         let subtopicItem = topic.subtopic.findIndex(subtopicPredicate)
         res.render('subtopics', {subtopic: topic.subtopic[subtopicItem]})
+    })
+    .catch((err)=> {
+        throw err
     })
 }
 
@@ -38,6 +58,9 @@ function postTopic(req, res) {
     .create(req.body.topic)
     .then(topic => {
         res.redirect(`/topics/${topic.title}`)
+    })
+    .catch((err)=> {
+        console.log(err)
     })
 }
 
@@ -50,6 +73,9 @@ function updateTopic(req, res) {
     .then(topic => {
         res.redirect(`/topics/${topic.title}`)
     })
+    .catch((err)=> {
+        console.log(err)
+    })
 }
 
 //DELETE - function to remove a question
@@ -58,6 +84,9 @@ function removeTopic(req, res) {
     .findOneAndRemove({ title: req.params.title })
     .then(() => {
         res.redirect('/topics')
+    })
+    .catch((err)=> {
+        console.log(err)
     })
 }
 

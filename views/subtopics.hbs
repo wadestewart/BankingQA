@@ -8,7 +8,7 @@
 
 <h4>Edit Question about {{ subtopic.name }}</h4>
 <form action="/topics/{{ subtopic.name }}?_method=put" method="post">
-  <input type="text" name="subtopic[detail]" value="Question">
+  <input type="text" name="subtopic[detail]" placeholder="Question">
   <input type="submit" value="Update">
 </form>
 

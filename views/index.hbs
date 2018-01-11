@@ -1,10 +1,14 @@
+
 {{#each topics as |topic index|}}
-<h2>
+<h4>
   <a href="/topics/{{topic.title}}">{{topic.title}}</a>
-</h2>
+</h4>
+<p>
+  {{topic.description}}
+</p>
 {{/each}}
 
-<h2>Ask Your Banker a Question</h2>
+<h5>Ask Your Banker a Question</h5>
 <form action="/topics" method="post">
   <input type="text" name="topic[title]" placeholder="Title">
   <input type="text" name="topic[description]" placeholder="Question">

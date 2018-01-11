@@ -29,7 +29,7 @@ function postLogin (req, res, next) {
         failureFlash : true
     })
 
-    return loginProperty(req, res)
+    return loginProperty(req, res, next)
 }
 
 // GET logout - function for a user to logout and redirect to home page
