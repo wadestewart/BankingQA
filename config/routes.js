@@ -48,7 +48,7 @@ router.route('/topics/:title/subtopics')
     .get(topicsController.getSubtopics)
 
 // Route to an individual Subtopic
-router.route('/subtopics/:_id')
-    .get(topicsController.findOneSubtopic)
+// router.route('/subtopics/:_id')
+//     .get(topicsController.findOneSubtopic)
 
 module.exports = router

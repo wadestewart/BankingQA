@@ -3,12 +3,14 @@
 <h4>
   <a href="/topics/{{topic.title}}">{{topic.title}}</a>
 </h4>
-<p>
+<h5>
   {{topic.description}}
-</p>
+</h5>
 {{/each}}
 
-<h5>Ask Your Banker a Question</h5>
+<hr>
+
+<h6>Ask Your Banker a Question</h6>
 <form action="/topics" method="post">
   <input type="text" name="topic[title]" placeholder="Title">
   <input type="text" name="topic[description]" placeholder="Question">

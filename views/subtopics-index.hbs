@@ -1,15 +1,6 @@
 {{#each subtopics as |subtopic index|}}
-<h4>
-  <a href="/subtopics/{{subtopic.name}}">{{subtopic.name}}</a>
-</h4>
+<h4>{{subtopic.name}}</h4>
 <p>
   {{subtopic.detail}}
 </p>
 {{/each}}
-
-<h5>Ask Your Banker a Question about {{subtopic.name}}</h5>
-<form action="/subtopics" method="post">
-  <input type="text" name="subtopic[name]" placeholder="Title">
-  <input type="text" name="subtopic[detail]" placeholder="Question">
-  <button class="btn waves-effect waves-light orange lighten-2 black-text" type="submit" name="action">Submit</button>
-</form>

@@ -16,6 +16,7 @@ function getTopics(req, res) {
 }
 
 // GET - function to retrieve Subtopic data from db, then render the query
+// Hammad helped me extensively find the path to targeting a subdocument
 function getSubtopics(req, res) {
     Topic
     .findOne({title: req.params.title})
@@ -42,19 +43,19 @@ function findOneTopic(req, res) {
 
 // GET - function to find a requested individual subtopic
 // Holy Smokes - Hammad found the code below to target and render a specific subtopic, it took us 4 hours...
-function findOneSubtopic(req, res) {
-    Topic
-    .findOne({ title: req.params.title })
-    .then(topic => {
-        console.log(topic)
-        let subtopicPredicate = el => el._id = req.params.name
-        let subtopicItem = topic.subtopic.findIndex(subtopicPredicate)
-        res.render('subtopics', {subtopic: topic.subtopic[subtopicItem]})
-    })
-    .catch((err)=> {
-        throw err
-    })
-}
+// function findOneSubtopic(req, res) {
+//     Topic
+//     .findOne({ title: req.params.title })
+//     .then(topic => {
+//         console.log(topic)
+//         let subtopicPredicate = el => el._id = req.params.name
+//         let subtopicItem = topic.subtopic.findIndex(subtopicPredicate)
+//         res.render('subtopics', {subtopic: topic.subtopic[subtopicItem]})
+//     })
+//     .catch((err)=> {
+//         throw err
+//     })
+// }
 
 //POST - function to POST a question on a Topic
 function postTopic(req, res) {
@@ -67,8 +68,6 @@ function postTopic(req, res) {
         console.log(err)
     })
 }
-
-//POST - function to POST a question on a Subtopic
 
 //PUT - function to edit an existing question
 function updateTopic(req, res) {
@@ -101,5 +100,4 @@ module.exports = {
     updateTopic: updateTopic,
     removeTopic: removeTopic,
     getSubtopics: getSubtopics,
-    findOneSubtopic: findOneSubtopic
 }
