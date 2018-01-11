@@ -1,7 +1,7 @@
 {{#if topic}}
 <h1>{{topic.title}}</h1>
 <h2>{{topic.description}}</h2>
-<a href="/subtopics"class="btn waves-effect waves-light orange lighten-2 black-text">Learn More</a>
+<a href="/topics/{{topic.title}}/subtopics"class="btn waves-effect waves-light orange lighten-2 black-text">Learn More</a>
 {{else}}
 <h2>That topic couldn't be found!</h2>
 {{/if}}

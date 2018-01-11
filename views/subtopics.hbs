@@ -1,10 +1,16 @@
-{{#if subtopic}}
+{{!-- {{#if subtopic}}
 <h1>{{subtopic.name}}</h1>
 <h2>{{subtopic.detail}}</h2>
 <hr>
 {{else}}
 <h2>That subtopic couldn't be found!</h2>
-{{/if}}
+{{/if}} --}}
+
+{{!-- {{#each subtopics as |subtopic index|}}
+<h3>
+  <a href="/subtopics/{{subtopic._id}}">{{subtopic.name}}</a>
+</h3>
+{{/each}} --}}
 
 <h4>Edit Question about {{ subtopic.name }}</h4>
 <form action="/topics/{{ subtopic.name }}?_method=put" method="post">
@@ -17,8 +23,4 @@
   <input type="submit" value="Remove">
 </form>
 
-{{!-- {{#each subtopics as |subtopic index|}}
-<h3>
-  <a href="/subtopics/{{subtopic._id}}">{{subtopic.name}}</a>
-</h3>
-{{/each}} --}}
+

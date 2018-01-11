@@ -17,11 +17,15 @@ function getTopics(req, res) {
 
 // GET - function to retrieve Subtopic data from db, then render the query
 function getSubtopics(req, res) {
-    Subtopic
-    .find({})
-    .then((subtopics) => {
-        res.render('subtopics', { subtopics })
+    Topic
+    .findOne({title: req.params.title})
+    .then((topic) => {
+        console.log('found topic subtopics: ' + topic.subtopic)
+        res.render('subtopics-index', { subtopics: topic.subtopic })
     })
+    .catch((err)=> {
+        console.log(err)
+    })    
 }
 
 // GET - function to find a requested individual topic
@@ -40,7 +44,7 @@ function findOneTopic(req, res) {
 // Holy Smokes - Hammad found the code below to target and render a specific subtopic, it took us 4 hours...
 function findOneSubtopic(req, res) {
     Topic
-    .findOne({ title: req.params.title})
+    .findOne({ title: req.params.title })
     .then(topic => {
         console.log(topic)
         let subtopicPredicate = el => el._id = req.params.name
