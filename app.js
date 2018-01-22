@@ -8,6 +8,7 @@ const hbs               = require('express-handlebars')
 const parser            = require('body-parser')
 const methodOverride    = require('method-override')
 const session           = require('express-session')
+const cors              = require('cors')
 
 const dataController    = require('./config/routes')
 
