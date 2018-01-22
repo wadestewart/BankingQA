@@ -7,9 +7,7 @@ function getTopics(req, res) {
     // console.log(req)
     Topic
     .find({})
-    .then((topics) => {
-        res.render('index', { topics })
-    })
+    .then(topics => res.json(topics))
     .catch((err)=> {
         console.log(err)
     })
@@ -20,22 +18,17 @@ function getTopics(req, res) {
 function getSubtopics(req, res) {
     Topic
     .findOne({title: req.params.title})
-    .then((topic) => {
-        console.log('found topic subtopics: ' + topic.subtopic)
-        res.render('subtopics-index', { subtopics: topic.subtopic })
-    })
+    .then(topic => res.json({subtopics: topic.subtopic}))
     .catch((err)=> {
         console.log(err)
-    })    
+    })
 }
 
 // GET - function to find a requested individual topic
 function findOneTopic(req, res) {
     Topic
     .findOne({ title: req.params.title })
-    .then(topic => {
-        res.render('topics', { topic })
-    })
+    .then(topic => res.json(topic))
     .catch((err)=> {
         console.log(err)
     })
@@ -61,9 +54,7 @@ function findOneTopic(req, res) {
 function postTopic(req, res) {
     Topic
     .create(req.body.topic)
-    .then(topic => {
-        res.redirect(`/topics/${topic.title}`)
-    })
+    .then(topic => res.json(`/topics/${topic.title}`))
     .catch((err)=> {
         console.log(err)
     })
@@ -73,9 +64,7 @@ function postTopic(req, res) {
 function updateTopic(req, res) {
     Topic
     .findOneAndUpdate({ title: req.params.title }, req.body.topic, { new: true})
-    .then(topic => {
-        res.redirect(`/topics/${topic.title}`)
-    })
+    .then(topic => res.json(`/topics/${topic.title}`))
     .catch((err)=> {
         console.log(err)
     })
@@ -85,9 +74,7 @@ function updateTopic(req, res) {
 function removeTopic(req, res) {
     Topic
     .findOneAndRemove({ title: req.params.title })
-    .then(() => {
-        res.redirect('/topics')
-    })
+    .then(() => res.json('/topics'))
     .catch((err)=> {
         console.log(err)
     })
