@@ -7,9 +7,7 @@ function getTopics(req, res) {
     // console.log(req)
     Topic
     .find({})
-    .then((topics) => {
-        res.render('index', { topics })
-    })
+    .then(topics => res.json(topics))
     .catch((err)=> {
         console.log(err)
     })
@@ -22,7 +20,7 @@ function getSubtopics(req, res) {
     .findOne({title: req.params.title})
     .then((topic) => {
         console.log('found topic subtopics: ' + topic.subtopic)
-        res.render('subtopics-index', { subtopics: topic.subtopic })
+        res.json('subtopics-index', { subtopics: topic.subtopic })
     })
     .catch((err)=> {
         console.log(err)
@@ -34,7 +32,7 @@ function findOneTopic(req, res) {
     Topic
     .findOne({ title: req.params.title })
     .then(topic => {
-        res.render('topics', { topic })
+        res.json('topics', { topic })
     })
     .catch((err)=> {
         console.log(err)
@@ -62,7 +60,7 @@ function postTopic(req, res) {
     Topic
     .create(req.body.topic)
     .then(topic => {
-        res.redirect(`/topics/${topic.title}`)
+        res.json(`/topics/${topic.title}`)
     })
     .catch((err)=> {
         console.log(err)
@@ -86,7 +84,7 @@ function removeTopic(req, res) {
     Topic
     .findOneAndRemove({ title: req.params.title })
     .then(() => {
-        res.redirect('/topics')
+        res.json('/topics')
     })
     .catch((err)=> {
         console.log(err)

@@ -48,6 +48,7 @@ app.use(routes);
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))
 app.use(parser.urlencoded({ extended: true }))
+app.use(parser.json())
 app.use('/', dataController)
 
 app.listen(app.get('port'), () => console.log('Live on 3001'))
