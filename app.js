@@ -18,10 +18,10 @@ const app               = express()
 
 app.use(morgan('dev'))
 app.use(cookieParser())
-app.use(parser())
+// app.use(parser())
 app.use(cors())
 
-app.set('port', process.env.PORT || 3001)
+app.set('port', process.env.PORT || 5001)
 app.set('view engine', 'hbs')
 app.engine('.hbs', hbs({
     extname:        '.hbs',
@@ -30,22 +30,22 @@ app.engine('.hbs', hbs({
     defaultLayout:  'layout'
 }))
 
-app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 
-app.use(passport.initialize());
-app.use(passport.session()); 
-app.use(flash()); 
+// app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 
+// app.use(passport.initialize());
+// app.use(passport.session()); 
+// app.use(flash()); 
 
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
-app.use(function (req, res, next) {
-  res.locals.currentUser = req.user;
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.locals.currentUser = req.user;
+//   next();
+// });
 
-var routes = require('./config/routes');
-app.use(routes);
+// var routes = require('./config/routes');
+// app.use(routes);
 
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))

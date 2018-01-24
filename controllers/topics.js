@@ -52,6 +52,7 @@ function findOneTopic(req, res) {
 
 //POST - function to POST a question on a Topic
 function postTopic(req, res) {
+    console.log(req.body)
     Topic
     .create(req.body.topic)
     .then(topic => res.json(`/topics/${topic.title}`))
