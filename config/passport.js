@@ -12,7 +12,7 @@ module.exports = function(passport) {
     })
 
     passport.deserializeUser(function(id, callback) {
-        User.findById(id, function(user, err) {
+        User.findById(id, function(err, user) {
             callback(err, user)
         })
     })
