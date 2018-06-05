@@ -1,12 +1,13 @@
-
-{{#each topics as |topic index|}}
-<h4>
-  <a href="/topics/{{topic.title}}">{{topic.title}}</a>
-</h4>
-<h5>
-  {{topic.description}}
-</h5>
-{{/each}}
+<div class="container">
+  {{#each topics as |topic index|}}
+  <h4>
+    <a href="/topics/{{topic.title}}">{{topic.title}}</a>
+  </h4>
+  <h5>
+    {{topic.description}}
+  </h5>
+  {{/each}}
+</div>
 
 <hr>
 

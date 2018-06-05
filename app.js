@@ -13,11 +13,14 @@ const dataController    = require('./config/routes')
 
 const app               = express()
 
-// mongoose.connect('mongodb://localhost/bankingqa')
+mongoose.connect('mongodb://localhost/bankingqa')
 
 app.use(morgan('dev'))
 app.use(cookieParser())
-app.use(parser())
+
+// app.use(parser())
+app.use(parser.json())
+app.use(parser.urlencoded({ extended: true }))
 
 app.set('port', process.env.PORT || 3001)
 app.set('view engine', 'hbs')
@@ -28,27 +31,25 @@ app.engine('.hbs', hbs({
     defaultLayout:  'layout'
 }))
 
-app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 
-app.use(passport.initialize());
-app.use(passport.session()); 
-app.use(flash()); 
+app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' }))
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(flash())
 
-require('./config/passport')(passport);
+require('./config/passport')(passport)
 
-require('./config/passport')(passport);
+require('./config/passport')(passport)
 
 app.use(function (req, res, next) {
-  res.locals.currentUser = req.user;
-  next();
-});
+  res.locals.currentUser = req.user
+  next()
+})
 
-var routes = require('./config/routes');
-app.use(routes);
+let routes = require('./config/routes')
+app.use(routes)
 
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))
-app.use(parser.urlencoded({ extended: true }))
-app.use(parser.json())
 app.use('/', dataController)
 
 app.listen(app.get('port'), () => console.log('Live on 3001'))
