@@ -8,12 +8,15 @@ const hbs               = require('express-handlebars')
 const parser            = require('body-parser')
 const methodOverride    = require('method-override')
 const session           = require('express-session')
+const path              = require('path')
 
 const dataController    = require('./config/routes')
 
 const app               = express()
 
-mongoose.connect('mongodb://localhost/bankingqa')
+// mongoose.connect('mongodb://localhost/bankingqa')
+
+app.use(express.static(path.join(__dirname, '/public')))
 
 app.use(morgan('dev'))
 app.use(cookieParser())
