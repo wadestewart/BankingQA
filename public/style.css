@@ -5,3 +5,11 @@
 .row {
     margin-bottom: 0 !important;
 }
+
+.card {
+    background-image: url('img/woman_phone.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0 !important;
+}
