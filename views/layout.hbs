@@ -17,10 +17,10 @@
     <div id="nav-bar" class="row">
       <nav class="orange lighten-2">
         <div class="nav-wrapper">
-          <a href="/" class="brand-logo center black-text col s1 offset-s2">
+          <a href="/" class="brand-logo center col s1 offset-s2">
             <img src="img/fake_bank.png" alt="fake bank logo">
           </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul id="nav-mobile" class="col s4 offset-s9 hide-on-med-and-down">
             {{#if currentUser}}
             <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
             {{/if}}
@@ -40,7 +40,3 @@
   </body>
   
 </html>
-
-            {{!-- {{else}}
-            <li><a href="/login" class="black-text">Login</a></li>
-            <li><a href="/sign-up" class="black-text">Sign Up</a></li> --}}
