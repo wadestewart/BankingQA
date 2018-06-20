@@ -2,8 +2,9 @@
     overflow: hidden;
 }
 
-.row {
+#nav-bar {
     margin-bottom: 0 !important;
+    z-index: 1;
 }
 
 .nav-wrapper {
@@ -22,25 +23,36 @@
     font-size: 48px !important;
 }
 
+#content {
+    position: relative;
+}
+
 .card-image {
     background-image: url('img/woman_phone.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     margin: 0 !important;
+    position: absolute;
+    opacity: 0.5;
 }
 
 .img-credit {
     bottom: 0;
-    position: absolute;
     left: 0;
+    position: fixed;
+    z-index: 2;
 }
 
 .card {
     border: 1px solid black;
-    height: 200px;
-    position: relative;
+    border-radius: 5px !important;
+    height: 225px;
+    left: 150px;
+    opacity: 1;
+    position: absolute;
     top: 150px;
+    z-index: 1;
 }
 
 .flex-card {
