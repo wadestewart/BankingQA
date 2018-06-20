@@ -6,10 +6,59 @@
     margin-bottom: 0 !important;
 }
 
-.card {
+.nav-wrapper {
+    height: 100px;
+}
+
+#about {
+    font-size: 48px !important;
+}
+
+#contact {
+    font-size: 48px !important;
+}
+
+#location {
+    font-size: 48px !important;
+}
+
+.card-image {
     background-image: url('img/woman_phone.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     margin: 0 !important;
+}
+
+.img-credit {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+}
+
+.card {
+    border: 1px solid black;
+    height: 200px;
+    position: relative;
+    top: 150px;
+}
+
+.flex-card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-text {
+    font-size: 24px;
+    padding: 10px;
+}
+
+#signup {
+    margin: 10px auto;
+}
+
+#login {
+    margin: 10px auto;
 }
