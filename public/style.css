@@ -4,11 +4,6 @@
 
 #nav-bar {
     margin-bottom: 0 !important;
-    z-index: 1;
-}
-
-.nav-wrapper {
-    height: 100px;
 }
 
 #about {
@@ -23,11 +18,11 @@
     font-size: 48px !important;
 }
 
-#content {
+#welcome-content {
     position: relative;
 }
 
-.card-image {
+#welcome-card-image {
     background-image: url('img/woman_phone.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,14 +32,13 @@
     opacity: 0.5;
 }
 
-.img-credit {
+.welcome-img-credit {
     bottom: 0;
     left: 0;
     position: fixed;
-    z-index: 2;
 }
 
-.card {
+#welcome-card {
     border: 1px solid black;
     border-radius: 5px !important;
     height: 225px;
@@ -55,7 +49,7 @@
     z-index: 1;
 }
 
-.flex-card {
+.welcome-flex-card {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -73,4 +67,21 @@
 
 #login {
     margin: 10px auto;
+}
+
+#signup-content {
+    position: relative;
+}
+
+#signup-card-image {
+    background-image: url('img/keyboard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+#signup-img-credit {
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }
