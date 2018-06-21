@@ -138,3 +138,10 @@
     opacity: 1;
     top: 10rem;
 }
+
+#index-buttons {
+    bottom: 0;
+    position: absolute;
+    margin: 1rem;
+    right: 0;
+}
