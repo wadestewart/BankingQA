@@ -68,7 +68,7 @@
     margin: 0.6rem auto;
 }
 
-#signup-content, #login-content, #index-content {
+#signup-content, #login-content, #index-content, #topic-content, #subtopic-content {
     height: 100vh;
     position: relative;
 }
@@ -88,7 +88,7 @@
     opacity: 0.7;
 }
 
-.signup-img-credit, .login-img-credit, .index-img-credit {
+.signup-img-credit, .login-img-credit, .index-img-credit, .topic-img-credit {
     bottom: 0;
     position: absolute;
     right: 0;
@@ -139,14 +139,14 @@
     top: 10rem;
 }
 
-#index-buttons {
+#index-buttons, #topic-buttons {
     bottom: 0;
     position: absolute;
     margin: 1rem;
     right: 0;
 }
 
-#crud-topic, #crud-question {
+#crud-topic, #crud-question, #crud-edit {
     border-bottom: 1px solid #01579b;
 }
 
@@ -156,9 +156,31 @@
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
-    height: 65vh;
+    height: 60vh;
     justify-content: space-evenly;
     margin: 1rem 0;
     position: relative;
     opacity: 0.7;
+}
+
+#topic-card {
+    border: 0.1rem solid black;
+    border-radius: 0.4rem !important;
+    height: 15rem;
+    margin: 0;
+    opacity: 1;
+    right: 23rem;
+    top: 10rem;
+}
+
+#subtopic-card {
+    border: 0.1rem solid black;
+    border-radius: 0.4rem !important;
+    display: flex;
+    flex-wrap: wrap;
+    height: 15rem;
+    justify-content: space-evenly;
+    margin: 0;
+    opacity: 1;
+    top: 10rem;
 }

@@ -1,6 +1,13 @@
-{{#each subtopics as |subtopic index|}}
-<h4>{{subtopic.name}}</h4>
-<p>
-  {{subtopic.detail}}
-</p>
-{{/each}}
+<div id="subtopic-content" class="row grey lighten-2">
+
+    {{#each subtopics as |subtopic index|}}
+  <div id="subtopic-card" class="card white z-depth-5 col s12 m2 offset-s6">
+    <h4 class="center-align light-blue-text text-darken-4">{{subtopic.name}}</h4>
+    <div class="divider"></div>
+    <h6 class="center-align light-blue-text text-darken-3">
+      {{subtopic.detail}}
+    </h6>
+  </div>
+    {{/each}}
+
+</div>
