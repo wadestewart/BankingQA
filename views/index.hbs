@@ -13,9 +13,9 @@
 
       {{#each topics as |topic index|}}
     <div id="index-card" class="card white z-depth-5 col s12 m2">
-      <h4 class="center-align">{{topic.title}}</h4>
+      <h4 class="center-align light-blue-text text-darken-4">{{topic.title}}</h4>
       <div class="divider"></div>
-      <h5 class="center-align">{{topic.description}}</h5>
+      <h5 class="center-align light-blue-text text-darken-3">{{topic.description}}</h5>
       <a id="index-buttons" class="btn-floating btn-large pulse orange lighten-2 right" href="/topics/{{topic.title}}"><i class="material-icons black-text">chevron_right</i></a>
     </div>
       {{/each}}
@@ -25,15 +25,15 @@
   <div class="divider"></div>
 
   <div class="container">
-    <h4 class="center-align">Ask Your Banker a Question</h4>
-    <form action="/topics" method="post">
+    <h4 class="center-align light-blue-text text-darken-4">Ask Your Banker a Question</h4>
+    <form class="center-align" action="/topics" method="post">
       <div class="input-field">
         <input id="crud-topic" type="text" name="topic[title]" placeholder="Topic">
-        <label for="crud-topic" class="black-text">General Topic of Your Question</label>
+        <label for="crud-topic" class="light-blue-text text-darken-3">General Topic of Your Question</label>
       </div>
       <div class="input-field">
-        <input id="crud-question"type="text" name="topic[description]" placeholder="Your Question">
-        <label for="crud-question" class="black-text">Your Question</label>
+        <input id="crud-question" type="text" name="topic[description]" placeholder="Your Question">
+        <label for="crud-question" class="light-blue-text text-darken-3">Your Question</label>
       </div>
       <button class="btn waves-effect waves-light orange lighten-2 black-text" type="submit" name="action">Submit</button>
     </form>

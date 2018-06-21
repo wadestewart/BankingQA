@@ -145,3 +145,7 @@
     margin: 1rem;
     right: 0;
 }
+
+#crud-topic, #crud-question {
+    border-bottom: 1px solid #01579b;
+}
