@@ -74,9 +74,9 @@
     position: relative;
 }
 
-#signup-title {
+.signup-title, .login-title {
     margin: 0;
-    padding: 2rem;
+    padding: 1rem 0;
 }
 
 #signup-card-image {
@@ -106,15 +106,8 @@
     z-index: 1;
 }
 
-.signup-flex {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 .form-group {
-    margin: 0.3rem;
+    margin: 1rem 0;
 }
 
 #login-card-image {
