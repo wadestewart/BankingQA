@@ -1,11 +1,15 @@
-<div class="container">
-  {{#if topic}}
-  <h1>{{topic.title}}</h1>
-  <h2>{{topic.description}}</h2>
-  <a href="/topics/{{topic.title}}/subtopics"class="btn waves-effect waves-light orange lighten-2 black-text">Learn More</a>
-  {{else}}
-  <h2>That topic couldn't be found!</h2>
-  {{/if}}
+<div id="topic-content" class="row grey lighten-2">
+  <div id="topic-card-image" class="col s12">
+
+    {{#if topic}}
+    <h1>{{topic.title}}</h1>
+    <h2>{{topic.description}}</h2>
+    <a href="/topics/{{topic.title}}/subtopics"class="btn waves-effect waves-light orange lighten-2 black-text">Learn More</a>
+    {{else}}
+    <h2>That topic couldn't be found!</h2>
+    {{/if}}
+
+  </div>
 </div>
 
 <h4>Edit Question about {{ topic.title }}</h4>

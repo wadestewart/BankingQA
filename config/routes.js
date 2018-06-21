@@ -37,7 +37,7 @@ router.route('/topics')
     .get(topicsController.getTopics)
     .post(topicsController.postTopic)
 
-// Route to an individual Topic and to edit or delete a topic
+// Route to get an individual Topic and to edit or delete a topic
 router.route('/topics/:title')
     .get(topicsController.findOneTopic)
     .put(topicsController.updateTopic)

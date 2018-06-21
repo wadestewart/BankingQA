@@ -149,3 +149,16 @@
 #crud-topic, #crud-question {
     border-bottom: 1px solid #01579b;
 }
+
+#topic-card-image {
+    background-image: url('/finance.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    height: 65vh;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    position: relative;
+    opacity: 0.7;
+}
