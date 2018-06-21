@@ -46,7 +46,6 @@
     opacity: 1;
     position: absolute;
     top: 10rem;
-    z-index: 1;
 }
 
 .welcome-flex {
@@ -89,7 +88,7 @@
     opacity: 0.7;
 }
 
-#signup-img-credit, #login-img-credit {
+.signup-img-credit, .login-img-credit, .index-img-credit {
     bottom: 0;
     position: absolute;
     right: 0;
@@ -102,7 +101,6 @@
     opacity: 1;
     position: absolute;
     top: 10rem;
-    z-index: 1;
 }
 
 .form-group {
@@ -123,8 +121,20 @@
     background-image: url('img/treeline.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    height: 65vh;
+    justify-content: space-evenly;
     margin: 1rem 0;
     position: relative;
     opacity: 0.7;
+}
+
+#index-card {
+    border: 0.1rem solid black;
+    border-radius: 0.4rem !important;
+    height: 18rem;
+    margin: 0;
+    opacity: 1;
+    top: 10rem;
 }
