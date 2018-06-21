@@ -1,19 +1,25 @@
-<div class="container">
-  {{#each topics as |topic index|}}
-  <h4>
-    <a href="/topics/{{topic.title}}">{{topic.title}}</a>
-  </h4>
-  <h5>
-    {{topic.description}}
-  </h5>
-  {{/each}}
+<div id="index-content" class="row grey lighten-2">
+  <div id="index-card-image" class="col s12">
+
+    <div>
+      {{#each topics as |topic index|}}
+      <h4>
+        <a href="/topics/{{topic.title}}">{{topic.title}}</a>
+      </h4>
+      <h5>
+        {{topic.description}}
+      </h5>
+      {{/each}}
+    </div>
+    
+  </div>
+
+  <div class="divider"></div>
+
+  <h6>Ask Your Banker a Question</h6>
+  <form action="/topics" method="post">
+    <input type="text" name="topic[title]" placeholder="Title">
+    <input type="text" name="topic[description]" placeholder="Question">
+    <button class="btn waves-effect waves-light orange lighten-2 black-text" type="submit" name="action">Submit</button>
+  </form>
 </div>
-
-<hr>
-
-<h6>Ask Your Banker a Question</h6>
-<form action="/topics" method="post">
-  <input type="text" name="topic[title]" placeholder="Title">
-  <input type="text" name="topic[description]" placeholder="Question">
-  <button class="btn waves-effect waves-light orange lighten-2 black-text" type="submit" name="action">Submit</button>
-</form>
