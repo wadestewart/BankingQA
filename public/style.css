@@ -173,13 +173,16 @@
     top: 10rem;
 }
 
+.subtopic-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #subtopic-card {
     border: 0.1rem solid black;
     border-radius: 0.4rem !important;
-    display: flex;
-    flex-wrap: wrap;
     height: 15rem;
-    justify-content: space-evenly;
     margin: 0;
     opacity: 1;
     top: 10rem;
