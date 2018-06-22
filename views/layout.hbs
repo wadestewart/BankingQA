@@ -17,13 +17,18 @@
     <div id="nav-bar" class="row">
       <nav class="orange lighten-2">
         <div class="nav-wrapper">
-          <a href="/" class="brand-logo center col s1 offset-s2">
-            <img src="/img/fake_bank.png" alt="fake bank logo">
-          </a>
-          <ul id="nav-mobile" class="col s4 offset-s9 hide-on-med-and-down">
-            {{#if currentUser}}
-            <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
-            {{/if}}
+          {{#if currentUser}}
+            <a href="/topics" class="brand-logo center col s1 offset-s2">
+              <img src="/img/fake_bank.png" alt="fake bank logo">
+            </a>
+            <ul id="nav-mobile" class="col s4 offset-s9 hide-on-med-and-down">
+              <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
+          {{else}}
+            <a href="/" class="brand-logo center col s1 offset-s2">
+              <img src="/img/fake_bank.png" alt="fake bank logo">
+            </a>
+            <ul id="nav-mobile" class="col s4 offset-s9 hide-on-med-and-down">
+          {{/if}}
             <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
             <li ><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
             <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>

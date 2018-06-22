@@ -8,7 +8,7 @@ function getSignup (req, res, next) {
 // POST signup - function to authenticate users and redirect based on data
 function postSignup (req, res) {
     let signupStrategy = passport.authenticate('local-signup', { // naming convention from passport.js
-        successRedirect : '/',
+        successRedirect : '/topics',
         failureRedirect : '/signup',
         failureFlash : true
     })
