@@ -15,8 +15,12 @@ const topicSchema = new mongoose.Schema({
 
 // Build a model from the schema, and attach it to the mongoose instance
 // This is how we query and manipulate data in the db
-const Topic = mongoose.model('Topic', topicSchema)
-const Subtopic = mongoose.model('Subtopic', subTopicSchema)
+// const Subtopic = mongoose.model('Subtopic', subTopicSchema)
+// const Topic = mongoose.model('Topic', topicSchema)
 
 // Give this file the ability to be imported into other files
-module.exports = {Topic, Subtopic}
+module.exports = 
+    // Subtopic: Subtopic,
+    // Topic: Topic
+    (mongoose.model('Subtopic', subTopicSchema), mongoose.model('Topic', topicSchema))
+
