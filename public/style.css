@@ -17,24 +17,8 @@ nav {
     vertical-align: middle;
 }
 
-#about {
-    font-size: 3rem !important;
-}
-
-#contact {
-    font-size: 3rem !important;
-}
-
-#location {
-    font-size: 3rem !important;
-}
-
-#welcome-content {
-    position: relative;
-}
-
 #welcome-card-image {
-    background-image: url('img/woman_phone.jpg');
+    background-image: url('img/group_phone.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -42,10 +26,10 @@ nav {
     opacity: 0.7;
 }
 
-.welcome-img-credit, .subtopic-img-credit {
+.welcome-img-credit, .signup-img-credit, .login-img-credit, .index-img-credit, .topic-img-credit, .subtopic-img-credit {
     bottom: 0;
-    right: 0;
     position: fixed;
+    right: 0;
 }
 
 #welcome-card {
@@ -76,9 +60,12 @@ nav {
     margin: 0.6rem auto;
 }
 
+#login {
+    margin: 0.6rem auto;
+}
+
 #signup-content, #login-content, #index-content, #topic-content, #subtopic-content {
     height: 100vh;
-    position: relative;
 }
 
 .signup-title, .login-title {
@@ -87,19 +74,13 @@ nav {
 }
 
 #signup-card-image {
-    background-image: url('img/keyboard.jpg');
+    background-image: url('img/phones.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     margin: 1rem 0;
     position: relative;
     opacity: 0.7;
-}
-
-.signup-img-credit, .login-img-credit, .index-img-credit, .topic-img-credit {
-    bottom: 0;
-    position: absolute;
-    right: 0;
 }
 
 #signup-card, #login-card {
