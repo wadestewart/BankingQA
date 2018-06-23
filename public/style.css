@@ -1,5 +1,4 @@
 .body {
-    height: 100%;
     overflow: hidden;
 }
 
@@ -27,10 +26,6 @@ nav {
 
 #location {
     font-size: 3rem !important;
-}
-
-#welcome-content {
-    position: relative;
 }
 
 #welcome-card-image {
