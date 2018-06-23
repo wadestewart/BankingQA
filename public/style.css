@@ -13,7 +13,7 @@ nav {
 }
 
 .brand-logo>img {
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
     vertical-align: middle;
 }
 
@@ -39,7 +39,6 @@ nav {
     background-size: cover;
     height: 100vh;
     margin: 1rem 0;
-    position: absolute;
     opacity: 0.7;
 }
 
@@ -52,11 +51,9 @@ nav {
 #welcome-card {
     border: 0.1rem solid black;
     border-radius: 0.4rem !important;
-    /* height: 14.1rem;
-    left: 10rem; */
+    margin: 3rem;
     opacity: 1;
     position: absolute;
-    /* top: 10rem; */
 }
 
 .welcome-flex {
