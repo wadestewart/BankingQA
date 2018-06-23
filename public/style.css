@@ -23,6 +23,7 @@ nav {
     background-size: cover;
     height: 100vh;
     margin: 1rem 0;
+    position: relative;
     opacity: 0.7;
 }
 
@@ -74,26 +75,24 @@ nav {
 }
 
 #signup-card-image {
-    background-image: url('img/phones.jpg');
+    background-image: url('img/typewriter.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     margin: 1rem 0;
-    position: relative;
     opacity: 0.7;
 }
 
 #signup-card, #login-card {
     border: 0.1rem solid black;
     border-radius: 0.4rem !important;
-    height: 22rem;
+    float: none;
     opacity: 1;
-    position: absolute;
-    top: 10rem;
+    margin: 3rem 0 0 0;
 }
 
-.form-group {
-    margin: 1rem 0;
+#sign-submit {
+    margin: 0 0 1rem 0;
 }
 
 #login-card-image {
