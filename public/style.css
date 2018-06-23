@@ -2,7 +2,7 @@
     overflow: hidden;
 }
 
-#nav-bar {
+.navbar-fixed {
     margin-bottom: 0 !important;
 }
 
@@ -41,11 +41,11 @@
 #welcome-card {
     border: 0.1rem solid black;
     border-radius: 0.4rem !important;
-    height: 14.1rem;
-    left: 10rem;
+    /* height: 14.1rem;
+    left: 10rem; */
     opacity: 1;
     position: absolute;
-    top: 10rem;
+    /* top: 10rem; */
 }
 
 .welcome-flex {

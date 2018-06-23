@@ -10,38 +10,45 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   </head>
 
-  <body class="body">
+  <body class="body row">
 
-    <div id="nav-bar" class="row">
+    <div class="navbar-fixed" role="navigation">
+
       <nav class="orange lighten-2">
+
         <div class="nav-wrapper">
+
           {{#if currentUser}}
             <a href="/topics" class="brand-logo center col s1 offset-s2">
               <img src="/img/fake_bank.png" alt="fake bank logo">
             </a>
-            <ul id="nav-mobile" class="col s4 offset-s9 hide-on-med-and-down">
+            <ul class="col s4 offset-s9 hide-on-med-and-down">
               <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
           {{else}}
             <a href="/" class="brand-logo center col s1 offset-s2">
               <img src="/img/fake_bank.png" alt="fake bank logo">
             </a>
-            <ul id="nav-mobile" class="col s4 offset-s9 hide-on-med-and-down">
+            <ul class="col s4 offset-s9 hide-on-med-and-down">
           {{/if}}
-            <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
-            <li ><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
-            <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
-          </ul>
+              <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
+              <li><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
+              <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
+            </ul>
+
         </div>
+
       </nav>
+
     </div>
 
     <main class="main"> 
         {{{body}}}
     </main> 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="/script.js"></script>
   </body>
   
 </html>
