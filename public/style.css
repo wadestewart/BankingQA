@@ -1,4 +1,5 @@
 .body {
+    max-width: 100vw;
     overflow: hidden;
 }
 
@@ -28,6 +29,10 @@ nav {
     font-size: 3rem !important;
 }
 
+#welcome-content {
+    position: relative;
+}
+
 #welcome-card-image {
     background-image: url('img/woman_phone.jpg');
     background-repeat: no-repeat;
@@ -39,7 +44,7 @@ nav {
 
 .welcome-img-credit, .subtopic-img-credit {
     bottom: 0;
-    left: 0;
+    right: 0;
     position: fixed;
 }
 
