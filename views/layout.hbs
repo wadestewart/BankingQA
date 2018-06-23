@@ -7,47 +7,44 @@
     <title>Fake Banking</title>
     <link rel="shortcut icon" href="./img/Logo-16x16-01.png" type="image/png" sizes="16x16">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
+    <link rel="stylesheet" href="/style.css">
   </head>
 
-  <header class="row">
-    <nav class="orange lighten-2">
-      <div class="nav-wrapper">
-        {{#if currentUser}}
-          <a href="/topics" class="brand-logo center col s1 offset-s2">
-            <img class="responsive-img" src="/img/fake_bank.png" alt="fake bank logo">
-          </a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons black-text">menu</i>
-          </a>
-          <ul class="col s4 offset-s9 hide-on-med-and-down">
-            <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
-        {{else}}
-          <a href="/" class="brand-logo center col s1 offset-s2">
-            <img src="/img/fake_bank.png" alt="fake bank logo">
-          </a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons black-text">menu</i>
-          </a>
-          <ul class="col s4 offset-s9 hide-on-med-and-down">
-        {{/if}}
-            <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
-            <li><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
-            <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
-          </ul>
-      </div>
-    </nav>
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
-      <li><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
-      <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
-    </ul>
-  </header>
+  <body class="body row">
 
-  <body>
+      <nav class="orange lighten-2">
+        <div class="nav-wrapper">
+          {{#if currentUser}}
+            <a href="/topics" id="bank" class="brand-logo col s1 offset-s2">
+              <img src="/img/fake_bank.png" alt="fake bank logo">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons black-text">menu</i>
+            </a>
+            <ul class="col s4 offset-s9 hide-on-med-and-down">
+              <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
+          {{else}}
+            <a href="/" id="bank" class="brand-logo center col s1 offset-s2">
+              <img src="/img/fake_bank.png" alt="fake bank logo">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons black-text">menu</i>
+            </a>
+            <ul class="col s4 offset-s9 hide-on-med-and-down">
+          {{/if}}
+              <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
+              <li><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
+              <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
+            </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
+        <li><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
+        <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
+      </ul>
 
     <main class="main"> 
         {{{body}}}
