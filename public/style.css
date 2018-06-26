@@ -27,7 +27,7 @@ nav {
     opacity: 0.7;
 }
 
-.welcome-img-credit, .signup-img-credit, .login-img-credit, .index-img-credit, .topic-img-credit, .subtopic-img-credit {
+.welcome-img-credit, .login-img-credit, .index-img-credit, .topic-img-credit, .subtopic-img-credit {
     bottom: 0;
     position: fixed;
     right: 0;
@@ -61,12 +61,14 @@ nav {
     margin: 0.6rem auto;
 }
 
-#login {
-    margin: 0.6rem auto;
-}
-
 #signup-content, #login-content, #index-content, #topic-content, #subtopic-content {
     height: 100vh;
+}
+
+.signup-img-credit {
+    bottom: 0;
+    position: fixed;
+    left: 0;
 }
 
 .signup-title, .login-title {
@@ -86,22 +88,20 @@ nav {
 #signup-card, #login-card {
     border: 0.1rem solid black;
     border-radius: 0.4rem !important;
-    float: none;
     opacity: 1;
     margin: 3rem 0 0 0;
 }
 
-#sign-submit {
+#sign-submit, #log-submit {
     margin: 0 0 1rem 0;
 }
 
 #login-card-image {
-    background-image: url('img/work.jpg');
+    background-image: url('img/login.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     margin: 1rem 0;
-    position: relative;
     opacity: 0.7;
 }
 

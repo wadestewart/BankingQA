@@ -15,11 +15,11 @@
         <div class="alert alert-danger">{{message}}</div>
     {{/if}}
 
-    <div id="login-card" class="card white z-depth-5 col s12 m3 offset-m2">
+    <div id="login-card" class="card white right col s12 m6 l3">
 
-      <h4 class="login-title"><strong>Login</strong></h4>
+      <h5 class="login-title"><strong>Login</strong></h5>
 
-      <div class="divider"></div>
+      <div class="divider black"></div>
 
       <div class="login-flex">
         <form method="post" action="/login">
@@ -33,7 +33,7 @@
             <input class="form-control" type="password" name="password" id="password">
           </div>
 
-          <input class="waves-effect waves-light btn-small orange lighten-1 black-text" type="submit">
+          <button id="log-submit" class="waves-effect waves-light btn-small orange lighten-1 black-text" type="submit">Submit</button>
         </form>
       </div>
       
