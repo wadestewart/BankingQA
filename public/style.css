@@ -22,7 +22,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     position: relative;
     opacity: 0.7;
 }
@@ -81,7 +81,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     opacity: 0.7;
 }
 
@@ -101,37 +101,45 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     opacity: 0.7;
 }
 
 #index-card-image {
+    align-content: center;
+    align-items: center;
     background-image: url('img/treeline.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    height: 65vh;
-    justify-content: space-evenly;
-    margin: 1rem 0;
-    position: relative;
+    height: 100vh;
+    margin: 0.5rem 0;
     opacity: 0.7;
 }
 
 #index-card {
     border: 0.1rem solid black;
     border-radius: 0.4rem !important;
-    height: 18rem;
-    margin: 0;
+    height: 7rem;
+    margin: 0.1rem;
     opacity: 1;
-    top: 10rem;
 }
 
 #index-buttons, #topic-buttons {
     bottom: 0;
+    margin: 0.2rem;
     position: absolute;
-    margin: 1rem;
     right: 0;
+}
+
+#index-crud-card {
+    border: 0.1rem solid black;
+    border-radius: 0.4rem !important;
+    height: 14rem;
+    margin: 0.15rem 0.1rem 0.15rem 0.1rem;
+    opacity: 1;
 }
 
 #crud-topic, #crud-question, #crud-edit {
@@ -146,7 +154,7 @@ nav {
     flex-wrap: wrap;
     height: 60vh;
     justify-content: space-evenly;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     position: relative;
     opacity: 0.7;
 }
