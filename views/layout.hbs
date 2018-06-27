@@ -41,6 +41,9 @@
         </div>
       </nav>
       <ul class="sidenav" id="mobile-demo">
+      {{#if currentUser}}
+        <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
+      {{/if}}
         <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
         <li><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
         <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
