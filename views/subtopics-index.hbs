@@ -13,17 +13,15 @@
       <span style="display:inline-block;padding:2px 3px">Benji Aird</span>
     </a>
 
-    <div class="subtopic-flex">
       {{#each subtopics as |subtopic index|}}
-        <div id="subtopic-card" class="card grey lighten-5 z-depth-5 col s12 m2 offset-s6">
-          <h3 class="center-align light-blue-text text-darken-4">{{subtopic.name}}</h3>
-          <div class="divider black"></div>
-          <h5 class="center-align light-blue-text text-darken-3">
+        <div id="subtopic-card" class="card grey lighten-5 col s12 m4 l4">
+          <h6 class="center-align light-blue-text text-darken-4">{{subtopic.name}}</h6>
+          <div class="divider light-blue darken-3"></div>
+          <p class="center-align light-blue-text text-darken-3">
             {{subtopic.detail}}
-          </h5>
+          </p>
         </div>
       {{/each}}
-    </div>
 
   </div>
 
