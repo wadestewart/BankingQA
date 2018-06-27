@@ -11,35 +11,40 @@
       <span style="display:inline-block;padding:2px 3px">rawpixel</span>
     </a>
 
-    <div id="topic-card" class="card grey lighten-5 z-depth-5 col s12 m2 offset-s6">
+    <div id="topic-card" class="card grey lighten-5 col s12 m6 l4">
       {{#if topic}}
-      <h4 class="center-align light-blue-text text-darken-4">{{topic.title}}</h4>
+      <h6 class="center-align light-blue-text text-darken-4">{{topic.title}}</h6>
       <div class="divider black"></div>
-      <h5 class="center-align light-blue-text text-darken-3">{{topic.description}}</h5>
-      <a id="topic-buttons" class="btn-floating btn-large pulse orange lighten-2 right" href="/topics/{{topic.title}}/subtopics"><i class="material-icons black-text">chevron_right</i></a>
+      <p class="center-align light-blue-text text-darken-3">{{topic.description}}</p>
+      <a id="topic-buttons" class="btn-floating btn-small pulse orange lighten-2 right" href="/topics/{{topic.title}}/subtopics"><i class="material-icons black-text">chevron_right</i></a>
       {{else}}
       <h2 class="center-align light-blue-text text-darken-4">That topic couldn't be found!</h2>
       {{/if}}
     </div>
 
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="container">
-    <h4 class="center-align light-blue-text text-darken-4">Edit Question about {{ topic.title }}</h4>
-    <form action="/topics/{{ topic.title }}?_method=put" method="post">
-    <div class="input-field">
-      <input id="crud-edit" type="text" name="topic[description]" placeholder="Question">
-      <label for="crud-edit" class="light-blue-text text-darken-3">Edit Question</label>
+    <div id="topic-card-crud" class="card grey lighten-5 col s12 m6 l4">
+      <h6 class="center-align light-blue-text text-darken-4">Edit Question about {{ topic.title }}</h6>
+      <div class="divider light-blue darken-3"></div>
+      <form action="/topics/{{ topic.title }}?_method=put" method="post">
+      <div class="input-field">
+        <input id="crud-edit" type="text" name="topic[description]" placeholder="Question">
+        <label for="crud-edit" class="light-blue-text text-darken-3">Edit Question</label>
+      </div>
+        <button id="index-buttons" class="btn-floating btn-small pulse orange lighten-2 right" type="submit" name="action">
+        <i class="material-icons black-text">chevron_right</i>
+      </button>
+      </form>
     </div>
-      <button class="btn waves-effect waves-light orange lighten-2 black-text center-align" type="submit" name="action">Edit</button>
-    </form>
 
-    <h4 class="light-blue-text text-darken-4">Remove Question</h4>
-    <form action="/topics/{{ topic.title }}?_method=delete" method="post">
-      <button class="btn waves-effect waves-light orange lighten-2 black-text center-align" type="submit" name="action">Remove</button>
-    </form>
+    <div id="delete-card" class="card grey lighten-5 col s12 m6 l4">
+      <h5 class="light-blue-text text-darken-4 center-align">Remove Question</h5>
+      <form action="/topics/{{ topic.title }}?_method=delete" method="post">
+        <button id="index-buttons" class="btn-floating btn-small pulse orange lighten-2 right" type="submit" name="action">
+          <i class="material-icons black-text">chevron_right</i>
+        </button>
+      </form>
+    </div>    
+
   </div>
 
 </div>
