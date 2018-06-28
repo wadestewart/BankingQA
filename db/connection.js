@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
     .then(connection => console.log(`Connection established to '${connection.db.databaseName}'`))
     .catch(connectionError => console.log('Connection Failed!', connectionError))
   } else {
-    mongoose.connect(mongoUri)
+    mongoose.createConnection(mongoUri)
     .then(connection => console.log(`Connection established to '${connection.db.databaseName}'`))
     .catch(connectionError => console.log('Connection Failed!', connectionError))
   }
