@@ -31,7 +31,7 @@
     "materialize": "^1.0.0",
     "method-override": "^2.3.10",
     "mongoose": "^5.1.6",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
