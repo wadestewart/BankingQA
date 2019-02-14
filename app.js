@@ -14,8 +14,6 @@ const dataController    = require('./config/routes')
 
 const app               = express()
 
-// mongoose.connect('mongodb://localhost/bankingqa')
-
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(express.static(path.join(__dirname, '/public/css')))
 app.use(express.static(path.join(__dirname, '/public/img')))
