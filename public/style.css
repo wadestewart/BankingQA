@@ -4,13 +4,15 @@
 }
 
 .brand-logo {
-    display: inline-block;
-    height: 100%;
+    height: 4.4rem;
+    margin: 0 0 0 4rem;
+    width: 4.4rem;  
 }
 
 .brand-logo > img {
-    margin: 0 0 0.5rem 0;
-    vertical-align: middle;
+    height: 4.2rem;
+    margin: 0 0 0 4rem;
+    width: 4.2rem;
 }
 
 nav > ul > .waves-effect > i {
