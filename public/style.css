@@ -1,6 +1,12 @@
 
-.body {
-    max-width: 100vw;
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
+    overflow: hidden;
 }
 
 nav {
@@ -17,11 +23,28 @@ nav > ul > .waves-effect > i {
     display: inline;
 }
 
-.waves-effect > i {
+.waves-effect > .material-icons {
     vertical-align: top;
 }
 
 .waves-effect > span {
-    font-size: 1.5rem;
-    line-height: 1rem;
+    font-size: 1rem;
+    line-height: 0.5rem;
+}
+
+#welcome-card-image {
+    /* background:
+        linear-gradient(to bottom, transparent, #fff 80%, url('/img/dog_laptop.jpg')); */
+    background-image:
+        url('/img/dog_laptop.jpg'),
+        linear-gradient(to bottom, transparent, #fff);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+#welcome-card {
+    position: absolute;
+    top: 10rem;
 }

@@ -49,10 +49,10 @@
         <ul class="center-align row">
         {{/if}}
           <li class="waves-effect black-text col s2 push-s4">
-            <i class="material-icons">person</i><span> About</span>
+            <i class="material-icons">account_balance</i><span> About</span>
           </li>
           <li class="waves-effect black-text col s2 push-s4">
-            <i class="material-icons">phone_iphone</i><span> Contact</span>
+            <i class="material-icons">contact_phone</i><span> Contact</span>
           </li>
           <li class="waves-effect black-text col s2 push-s4">
             <i class="material-icons">location_on</i><span> Locations</span>
@@ -64,12 +64,12 @@
     {{#if currentUser}}
       <li><a href="/logout" class="logout black-text">Logout {{currentUser.local.email}}</a></li>
     {{/if}}
-      <li><a href="" class="black-text"><i id="about" class="material-icons">person</i></a></li>
+      <li><a href="" class="black-text"><i id="about" class="material-icons">account_balance</i></a></li>
       <li><a href="" class="black-text"><i id="contact" class="material-icons">phone_iphone</i></a></li>
       <li><a href="" class="black-text"><i id="location" class="material-icons">location_on</i></a></li>
     </ul>
 
-    <main class="main"> 
+    <main> 
         {{{body}}}
     </main> 
 
