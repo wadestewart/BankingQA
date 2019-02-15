@@ -5,7 +5,7 @@
 
 
     <div id="signup-card" class="card grey lighten-5 right col s6 m4">
-      <h5 class="signup-title"><strong>Sign Up</strong></h5>
+      <h5 class="signup-title"><strong>Sign Up For Online Banking</strong></h5>
       <div class="divider grey"></div>
       <div class="signup-form">
         <form method="post" action="/signup">
@@ -23,7 +23,10 @@
         </form>
       </div>
       {{#if message}}
-        <div class="alert alert-danger">{{message}}</div>
+        <div id="signup-alert" class="alert alert-danger">
+          <span>{{message}}</span>
+          <a href='/login' id="signup-login" class='waves-effect waves-light btn orange lighten-1 black-text col s6'>Login</a>
+        </div>
       {{/if}}
       </div>
     </div>

@@ -2,31 +2,27 @@
 
   <div id="login-card-image" class="col s12">
 
-    {{#if message}}
-        <div class="alert alert-danger">{{message}}</div>
-    {{/if}}
+    <div id="login-card" class="card grey lighten-5 right col s6 m4">
+        {{#if message}}
+            <div class="alert alert-danger">{{message}}</div>
+        {{/if}}
+        <h5 class="login-title"><strong>Let's Login</strong></h5>
+        <div class="divider grey"></div>
+        <div class="incorrect-login-form">
+            <form method="post" action="/login">
+            <div class="form-group col s6">
+                <label for="email">Email</label>
+                <input class="form-control" type="text" name="email" id="email">
+            </div>
 
-    <div id="login-card" class="card grey lighten-5 right col s12 m6 l3">
+            <div class="form-group col s6">
+                <label for="email">Password</label>
+                <input class="form-control" type="password" name="password" id="password">
+            </div>
 
-      <h5 class="login-title"><strong>Login</strong></h5>
-
-      <div class="divider grey"></div>
-
-      <div class="login-flex">
-        <form method="post" action="/login">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input class="form-control" type="text" name="email" id="email">
-          </div>
-
-          <div class="form-group">
-            <label for="email">Password</label>
-            <input class="form-control" type="password" name="password" id="password">
-          </div>
-
-          <button id="log-submit" class="waves-effect waves-light btn-small orange lighten-1 black-text" type="submit">Submit</button>
-        </form>
-      </div>
+            <button id="incorrect-login-submit" class="waves-effect waves-light btn orange lighten-1 black-text col s6" type="submit">Submit</button>
+            </form>
+        </div>
       
     </div>
 

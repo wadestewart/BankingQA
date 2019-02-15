@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html, body {
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
     height: 100%;
     overflow: hidden;
 }
@@ -57,6 +59,36 @@ nav > ul > .waves-effect > i {
     margin: 0.5rem 0 0 0;
 }
 
+.alert {
+    font-size: 1.5rem;
+    color: red;
+}
+
+#login-card-image {
+    background:
+        linear-gradient(to top, transparent, #fff 95%), url('/img/incorrect_login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+#login-card {
+    border-radius: 0.4rem !important;
+    position: absolute;
+    right: 10rem;
+    top: 8rem;
+}
+
+.incorrect-login-form {
+    height: 8rem;
+    margin: 2rem 0;
+}
+
+#incorrect-login-submit {
+    margin: 0.5rem 0 0 0;
+}
+
 .welcome-signup {
     height: 5rem;
     margin: 2rem 0;
@@ -76,6 +108,7 @@ nav > ul > .waves-effect > i {
 }
 
 #signup-card {
+    border-radius: 0.4rem !important;
     position: absolute;
     right: 10rem;
     top: 8rem;
@@ -83,9 +116,17 @@ nav > ul > .waves-effect > i {
 
 .signup-form {
     height: 10rem;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
 }
 
 #signup-submit {
+    margin: 0.5rem 0 0 0;
+}
+
+#signup-alert {
+    height: 7rem;
+}
+
+#signup-login {
     margin: 0.5rem 0 0 0;
 }
