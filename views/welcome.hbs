@@ -2,10 +2,6 @@
 
     <div id="welcome-card-image" class="responsive-img col s12">
 
-        {{#if message}}
-            <div class="alert alert-danger">{{message}}</div>
-        {{/if}}
-
         <div id="welcome-card" class="card white col s6 m4 z-depth-4">
             <h5 id="card-text">Fake Online Banking</h5>
             <div class="divider"></div>
@@ -24,6 +20,9 @@
                     <button id="login-submit" class="center waves-effect waves-light btn orange lighten-1 black-text col s6" type="submit">Login</button>
                 </form>
             </div>
+            {{#if message}}
+                <div class="alert alert-danger">{{message}}</div>
+            {{/if}}
             <div class="divider"></div>
             <div class="welcome-signup">
                 <span>Don't Have An Account? Please Sign-Up</span>

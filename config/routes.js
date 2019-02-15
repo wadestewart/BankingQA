@@ -25,7 +25,7 @@ router.route('/signup')
 
 // Route to login page
 router.route('/login')
-    // .get(usersController.getLogin)
+    .get(usersController.getLogin)
     .post(usersController.postLogin)
 
 // Route for logout
