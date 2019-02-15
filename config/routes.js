@@ -32,6 +32,10 @@ router.route('/login')
 router.route('/logout')
     .get(usersController.getLogout)
 
+// Route to render dashboard after login
+router.route('/dashboard')
+    .get(staticsController.dashboard)
+
 // Route to the Topics list in the Q&A Forum and to POST a question
 router.route('/topics')
     .get(topicsController.getTopics)

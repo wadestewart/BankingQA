@@ -24,7 +24,7 @@ function getLogin (req, res, next) {
 // POST login - function to handle login form when submitted
 function postLogin (req, res) {
     let loginProperty = passport.authenticate('local-login', { // naming convention from passport.js
-        successRedirect : '/topics',
+        successRedirect : '/dashboard',
         failureRedirect : '/login',
         failureFlash : true
     })
