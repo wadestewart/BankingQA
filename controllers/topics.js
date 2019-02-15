@@ -8,6 +8,7 @@ function getTopics(req, res) {
     Topic
     .find({})
     .then((topics) => {
+        console.log('found topics: ' + topics)
         res.render('index', { topics })
     })
     .catch((err)=> {

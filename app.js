@@ -1,5 +1,4 @@
 const express           = require('express')
-const mongoose          = require('mongoose')
 const passport          = require('passport')
 const flash             = require('connect-flash')
 const morgan            = require('morgan')
@@ -14,7 +13,6 @@ const dataController    = require('./config/routes')
 
 const app               = express()
 
-// mongoose.connect('mongodb://localhost/bankingqa')
 
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(express.static(path.join(__dirname, '/public/css')))
