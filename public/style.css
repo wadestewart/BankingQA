@@ -37,7 +37,7 @@ nav > ul > .waves-effect > i {
         linear-gradient(to bottom, transparent, #fff 80%, url('/img/dog_laptop.jpg')); */
     background-image:
         url('/img/dog_laptop.jpg'),
-        linear-gradient(to bottom, transparent, #fff);
+        linear-gradient(to right, transparent, #fff);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -45,6 +45,26 @@ nav > ul > .waves-effect > i {
 }
 
 #welcome-card {
+    border-radius: 0.4rem !important;
     position: absolute;
-    top: 10rem;
+    right: 10rem;
+    top: 8rem;
+}
+
+.login {
+    height: 8rem;
+    margin: 2rem 0;
+}
+
+#log-submit {
+    margin: 0.5rem 0 0 0;
+}
+
+.welcome-signup {
+    height: 5rem;
+    margin: 2rem 0;
+}
+
+.welcome-signup > a {
+    margin: 1rem 0 0 0;
 }
