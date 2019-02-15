@@ -33,11 +33,11 @@ nav > ul > .waves-effect > i {
 }
 
 #welcome-card-image {
-    /* background:
-        linear-gradient(to bottom, transparent, #fff 80%, url('/img/dog_laptop.jpg')); */
-    background-image:
+    background:
+        linear-gradient(to left, transparent, #fff 95%), url('/img/dog_laptop.jpg');
+    /* background-image:
         url('/img/dog_laptop.jpg'),
-        linear-gradient(to right, transparent, #fff);
+        -webkit-linear-gradient(to left, transparent, #fff); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
