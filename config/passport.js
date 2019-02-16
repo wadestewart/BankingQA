@@ -29,7 +29,7 @@ module.exports = function(passport) {
             if (err) return callback(err)
             // If user already exists in database
             if (user) {
-                return callback(null, false, req.flash('signupMessage', 'Email already in use!'))
+                return callback(null, false, req.flash('signupMessage', 'Email Already In Use'))
             } else {
                 // If no email in database, create new user
                 let newUser             = new User()
@@ -56,10 +56,10 @@ module.exports = function(passport) {
         // If user is not found        
         }   
         if(!user) {
-            return callback(null, false, req.flash('loginMessage', 'User was not found'))
+            return callback(null, false, req.flash('loginMessage', 'User Was Not Found'))
         }
         if(!user.validPassword(password)) {
-            return callback(null, false, req.flash('loginMessage', 'Incorrect Password!'))
+            return callback(null, false, req.flash('loginMessage', 'Password Incorrect, Try Again'))
         }
         return callback(null, user) 
         })    
